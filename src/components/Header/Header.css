@@ -1,21 +1,49 @@
-.header img{
-    width: 150px;
-}
-.header{
-    text-align: center;
-}
-.header nav{
-    text-align: left;
+/* Header.css */
+
+.container {
+    padding: 0;
+  }
+  
+  .header {
     background-color: black;
-    line-height: 40px;
-    font-size: 20px;
-}
-nav a{
-    text-decoration: none;
+  }
+  
+  .navbar-brand img {
+    height: 50px;
+  }
+  
+  .navbar-nav .nav-link {
     color: white;
     margin-right: 10px;
-    padding: 5px;
-}
-nav a:hover{
-    background-color: gray;
-}
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f8f9fa; /* change hover color if needed */
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #f8f9fa; /* change active color if needed */
+  }
+  
+
+  
+  .navbar-nav.mr-auto {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav.ml-auto {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .navbar-nav .nav-link {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+  
+  .navbar-nav .nav-link:last-child {
+    margin-right: 20px;
+  }
+  

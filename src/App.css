@@ -1,4 +1,7 @@
 
+/* src/styles.css or your custom CSS file */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 .App-link {
   color: #61dafb;
 }
