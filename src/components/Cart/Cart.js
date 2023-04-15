@@ -12,7 +12,7 @@ const Cart = (props) => {
         quant=quant+(props.cart[i].quantity)   
        
     }
-    console.log(quant)
+
     const vat=(total*.1).toFixed(2);
     let grandTotal=total+Number(vat);
     console.log(grandTotal);
