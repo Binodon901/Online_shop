@@ -11,13 +11,11 @@ const Header = () => {
 
     return (
 
-        <div className="container">
-            
-            <div className='row col-md-12'>
-                
-        <Navbar className="header">
-          <Navbar.Brand>
-          </Navbar.Brand>
+      <div className="container">
+      <Navbar className="header">
+        <Navbar.Brand />
+        <Navbar.Toggle aria-controls="navbar-nav" />
+        <Navbar.Collapse id="navbar-nav">
           <Nav className="mr-auto">
             <NavItem>
               <Link className="nav-link" to="/shop">
@@ -53,9 +51,10 @@ const Header = () => {
               </NavItem>
             )}
           </Nav>
-        </Navbar>
-      </div>
-      </div>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
+    
     );
   };
 

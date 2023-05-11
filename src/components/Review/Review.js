@@ -44,7 +44,7 @@ const Review = () => {
             <div className='col-md-6 cart-container'>
                 <Cart cart={cart}></Cart>
                 <br></br>
-            <button className="mainButton" onClick={placeOrderHandler}><FontAwesomeIcon icon={faSignIn}></FontAwesomeIcon> Place-Order</button>
+            <button className="mainButton" onClick={placeOrderHandler}><FontAwesomeIcon icon={faSignIn}></FontAwesomeIcon>Order</button>
             </div>
             
             <div className="col-md-6">
