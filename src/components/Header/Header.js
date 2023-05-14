@@ -1,18 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useContext,useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 import logo from '../../images/logo.png'
 import './Header.css'
+import Cart from '../Cart/Cart';
 import { Nav, Navbar, NavItem, Button } from 'react-bootstrap';
+import Currentcart from '../Cart/Currentcart';
 
 const Header = () => {
-    
+  const [cart, setCart] = useState([]);
     const [loggedInUser,setLoggedInUser]=useContext(UserContext)
 
     return (
 
       <div className="container">
-      <Navbar className="header">
+      <Navbar className="header fixed-top">
         <Navbar.Brand />
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">

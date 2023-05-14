@@ -20,15 +20,10 @@ const Currentcart = (props) => {
     return (
    
 
-        <div className="container">
-            <div className='row'>
-            <h1> <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon> CART <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></h1><br></br>
-            <h5>Current order</h5>
-            <h6>Currently selected : {props.cart.length}</h6>  
+        <div>
+            <h1>CART <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></h1>
+            <h6>Current Item: {props.cart.length}</h6>  
             <h6>Price: {total}</h6>
-            </div>
-            
-
         </div>
     );
 };

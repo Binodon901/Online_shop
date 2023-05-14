@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import fakeData from '../../fakeData';
 import { getDatabaseCart, removeFromDatabaseCart } from '../../utilities/databaseManager';
@@ -8,8 +8,10 @@ import '../Product/Product.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSignIn} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 const Review = () => {
     const [cart, setCart] = useState([]);
+  
     const history=useHistory();
     const placeOrderHandler=()=>{
         history.push('/shipment')
@@ -41,14 +43,16 @@ const Review = () => {
         <div className="container">
             <div className='row'>
             
-            <div className='col-md-6 cart-container'>
-                <Cart cart={cart}></Cart>
+            <div className='col-md-6'>
+            <Cart cart={cart}></Cart>
+                <button className="mainButton" onClick={placeOrderHandler}><FontAwesomeIcon icon={faSignIn}></FontAwesomeIcon>Order</button>
                 <br></br>
-            <button className="mainButton" onClick={placeOrderHandler}><FontAwesomeIcon icon={faSignIn}></FontAwesomeIcon>Order</button>
-            </div>
+                <br></br>
+                <br></br>
+                </div>
             
             <div className="col-md-6">
-            <h1>Total items {cart.length}</h1>
+            <h1>Total {cart.length} types of item</h1>
             {
                 cart.map(pd => <ReviewItem product={pd} removeProduct={removeProduct}></ReviewItem>)
             }

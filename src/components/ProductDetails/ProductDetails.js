@@ -10,6 +10,7 @@ const ProductDetails = () => {
       
          <div className='container'>
          <div className='row'>
+         <div className='col-md-12'>
        <div className='product'>
        <h1>Product key: {productKey}</h1>
               
@@ -26,6 +27,7 @@ const ProductDetails = () => {
            <p><small>Only {product.stock} products left in stock - Order soon:</small></p>
            
 
+       </div>
        </div>
        </div>
        </div>
